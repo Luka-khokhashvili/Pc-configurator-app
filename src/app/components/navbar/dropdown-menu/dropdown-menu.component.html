@@ -1,0 +1,49 @@
+<div
+        class="absolute top-0 -left-43 transition 
+        group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+        group-hover:opacity-100 
+        group-hover:visible duration-500 ease-in-out 
+        group-hover:transform z-50 min-w-[460px] transform"
+      >
+        <div class="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
+          <div class="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 
+          translate-x-0 transition-transform group-hover:translate-x-[12rem]
+          duration-500 ease-in-out rounded-sm"></div>
+          <div class="relative z-10">
+            <div class="grid grid-cols-2 gap-6">
+              <div>
+                <p class="uppercase tracking-wider
+                text-gray-500 font-medium text-[13px]">Main Parts</p>
+                <ul class="mt-3 text-[15px]">
+                  <li *ngFor="let itemName of mainParts">
+                    <a href="#{{ itemName }}" class="block p-2 -mx-2 rounded-lg 
+                    hover:bg-gradient-to-br 
+                    hover:from-indigo-50
+                    hover:to-pink-50
+                    hover:via-blue-50 transition
+                    ease-in-out duration-300
+                    text-gray-800 font-semibold
+                    hover:text-indigo-600">{{ itemName }}</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p class="uppercase tracking-wider
+                text-gray-500 font-medium text-[13px]">Peripherals</p>
+                <ul class="mt-3 text-[15px]">
+                  <li *ngFor="let itemName of Peripherals">
+                    <a href="#{{ itemName }}" class="block p-2 -mx-2 rounded-lg 
+                    hover:bg-gradient-to-br 
+                    hover:from-indigo-50
+                    hover:to-pink-50
+                    hover:via-blue-50 transition
+                    ease-in-out duration-300
+                    text-gray-800 font-semibold
+                    hover:text-indigo-600">{{ itemName }}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
