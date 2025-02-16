@@ -10,14 +10,14 @@ import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 })
 export class NavbarComponent {
   mainParts: string[] = [
-    'CPU',
-    'Motherboard',
-    'RAM',
-    'GPU',
-    'SSD',
-    'HDD',
-    'CPU Cooler',
-    'Case',
+    'cpu',
+    'motherboard',
+    'ram',
+    'gpu',
+    'ssd',
+    'hdd',
+    'cpu cooler',
+    'case',
   ];
-  Peripherals: string[] = ['Monitor', 'Keyboard', 'Mouse', 'Headset'];
+  Peripherals: string[] = ['monitor', 'keyboard', 'mouse', 'headset'];
 }

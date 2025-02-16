@@ -10,4 +10,11 @@ import { Component, Input } from '@angular/core';
 export class DropdownMenuComponent {
   @Input() mainParts!: string[];
   @Input() Peripherals!: string[];
+
+  scrollTo(componentId: string) {
+    const element = document.getElementById(componentId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }
