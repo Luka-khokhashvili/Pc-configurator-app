@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { WelcomeComponent } from './components/welcome-section/welcome.component';
 import { PartSelectorComponent } from './components/part-selector/part-selector.component';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +12,21 @@ import { PartSelectorComponent } from './components/part-selector/part-selector.
     NavbarComponent,
     WelcomeComponent,
     PartSelectorComponent,
+    NgFor,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'pc-configurator-app';
+  mainParts: string[] = [
+    'cpu',
+    'motherboard',
+    'ram',
+    'gpu',
+    'ssd',
+    'hdd',
+    'cpu cooler',
+    'case',
+  ];
 }

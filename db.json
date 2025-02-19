@@ -1,0 +1,694 @@
+{
+  "cpu": [
+    {
+      "name": "AMD Ryzen 9 7950X3D",
+      "price": 557,
+      "core_count": 16,
+      "core_clock": 4.2,
+      "boost_clock": 5.7,
+      "tdp": 120,
+      "graphics": "Radeon",
+      "smt": true
+    },
+    {
+      "name": "AMD Ryzen 9 7900X",
+      "price": 419.99,
+      "core_count": 12,
+      "core_clock": 4.7,
+      "boost_clock": 5.6,
+      "tdp": 170,
+      "graphics": "Radeon",
+      "smt": true
+    },
+    {
+      "name": "AMD Ryzen 7 7800X3D",
+      "price": 439,
+      "core_count": 8,
+      "core_clock": 4.2,
+      "boost_clock": 5,
+      "tdp": 120,
+      "graphics": "Radeon",
+      "smt": true
+    },
+    {
+      "name": "AMD Ryzen 5 5600X",
+      "price": 168.99,
+      "core_count": 6,
+      "core_clock": 3.7,
+      "boost_clock": 4.6,
+      "tdp": 65,
+      "graphics": null,
+      "smt": true
+    },
+    {
+      "name": "Intel Core i9-13900K",
+      "price": 568.99,
+      "core_count": 24,
+      "core_clock": 3,
+      "boost_clock": 5.8,
+      "tdp": 125,
+      "graphics": "Intel UHD Graphics 770",
+      "smt": true
+    },
+    {
+      "name": "Intel Core i7-13700KF",
+      "price": 382.84,
+      "core_count": 16,
+      "core_clock": 3.4,
+      "boost_clock": 5.4,
+      "tdp": 125,
+      "graphics": null,
+      "smt": true
+    },
+    {
+      "name": "Intel Core i5-13500",
+      "price": 247.98,
+      "core_count": 14,
+      "core_clock": 2.5,
+      "boost_clock": 4.8,
+      "tdp": 65,
+      "graphics": "Intel UHD Graphics 770",
+      "smt": true
+    },
+    {
+      "name": "Intel Core i3-13100",
+      "price": 138.94,
+      "core_count": 4,
+      "core_clock": 3.4,
+      "boost_clock": 4.5,
+      "tdp": 60,
+      "graphics": "Intel UHD Graphics 730",
+      "smt": true
+    }
+  ],
+  "motherboard": [
+    {
+      "name": "MSI MAG B550 TOMAHAWK",
+      "price": 169.99,
+      "socket": "AM4",
+      "form_factor": "ATX",
+      "max_memory": 128,
+      "memory_slots": 4,
+      "color": "Black / Silver"
+    },
+    {
+      "name": "MSI B550-A PRO",
+      "price": 139.99,
+      "socket": "AM4",
+      "form_factor": "ATX",
+      "max_memory": 128,
+      "memory_slots": 4,
+      "color": "Black / Silver"
+    },
+    {
+      "name": "MSI B550M PRO-VDH WIFI",
+      "price": 119.99,
+      "socket": "AM4",
+      "form_factor": "Micro ATX",
+      "max_memory": 128,
+      "memory_slots": 4,
+      "color": "Black"
+    },
+    {
+      "name": "Gigabyte Z790 AORUS ELITE AX",
+      "price": 239.99,
+      "socket": "LGA1700",
+      "form_factor": "ATX",
+      "max_memory": 128,
+      "memory_slots": 4,
+      "color": "Black"
+    },
+    {
+      "name": "Asus Prime B450M-A II",
+      "price": 79.99,
+      "socket": "AM4",
+      "form_factor": "Micro ATX",
+      "max_memory": 128,
+      "memory_slots": 4,
+      "color": null
+    },
+    {
+      "name": "MSI MAG B660 TOMAHAWK WIFI DDR4",
+      "price": 189.99,
+      "socket": "LGA1700",
+      "form_factor": "ATX",
+      "max_memory": 128,
+      "memory_slots": 4,
+      "color": "Black / Silver"
+    },
+    {
+      "name": "Gigabyte B650 AORUS ELITE AX",
+      "price": 202.3,
+      "socket": "AM5",
+      "form_factor": "ATX",
+      "max_memory": 128,
+      "memory_slots": 4,
+      "color": "Black / Silver"
+    },
+    {
+      "name": "Asus ROG STRIX B550-A GAMING",
+      "price": 169.99,
+      "socket": "AM4",
+      "form_factor": "ATX",
+      "max_memory": 128,
+      "memory_slots": 4,
+      "color": "Black / White"
+    },
+    {
+      "name": "MSI MAG Z790 TOMAHAWK WIFI",
+      "price": 276.79,
+      "socket": "LGA1700",
+      "form_factor": "ATX",
+      "max_memory": 192,
+      "memory_slots": 4,
+      "color": "Black"
+    },
+    {
+      "name": "MSI MAG B650 TOMAHAWK WIFI",
+      "price": 219.95,
+      "socket": "AM5",
+      "form_factor": "ATX",
+      "max_memory": 128,
+      "memory_slots": 4,
+      "color": "Black"
+    }
+  ],
+  "memory": [
+    {
+      "name": "Corsair Vengeance LPX 16 GB",
+      "price": 39.99,
+      "speed": [4, 3200],
+      "modules": [2, 8],
+      "price_per_gb": 2.499,
+      "color": "Black / Yellow",
+      "first_word_latency": 10,
+      "cas_latency": 16
+    },
+    {
+      "name": "Corsair Vengeance RGB Pro 32 GB",
+      "price": 104.98,
+      "speed": [4, 3600],
+      "modules": [2, 16],
+      "price_per_gb": 3.281,
+      "color": "Black",
+      "first_word_latency": 10,
+      "cas_latency": 18
+    },
+    {
+      "name": "Corsair Vengeance 32 GB",
+      "price": 92.99,
+      "speed": [5, 5600],
+      "modules": [2, 16],
+      "price_per_gb": 2.906,
+      "color": "Black",
+      "first_word_latency": 12.857,
+      "cas_latency": 36
+    },
+    {
+      "name": "Corsair Vengeance LPX 32 GB",
+      "price": 67.98,
+      "speed": [4, 3600],
+      "modules": [2, 16],
+      "price_per_gb": 2.124,
+      "color": "Black / Yellow",
+      "first_word_latency": 10,
+      "cas_latency": 18
+    },
+    {
+      "name": "G.Skill Trident Z5 RGB 32 GB",
+      "price": 104.99,
+      "speed": [5, 6000],
+      "modules": [2, 16],
+      "price_per_gb": 3.281,
+      "color": "Black",
+      "first_word_latency": 12,
+      "cas_latency": 36
+    },
+    {
+      "name": "Corsair Vengeance RGB Pro 16 GB",
+      "price": 56.99,
+      "speed": [4, 3200],
+      "modules": [2, 8],
+      "price_per_gb": 3.562,
+      "color": "Black",
+      "first_word_latency": 10,
+      "cas_latency": 16
+    },
+    {
+      "name": "G.Skill Trident Z5 RGB 64 GB",
+      "price": 229.99,
+      "speed": [5, 6400],
+      "modules": [2, 32],
+      "price_per_gb": 3.594,
+      "color": "Black / Silver",
+      "first_word_latency": 10,
+      "cas_latency": 32
+    },
+    {
+      "name": "Silicon Power GAMING 16 GB",
+      "price": 29.97,
+      "speed": [4, 3200],
+      "modules": [2, 8],
+      "price_per_gb": 1.873,
+      "color": "Black / Gray",
+      "first_word_latency": 10,
+      "cas_latency": 16
+    },
+    {
+      "name": "Corsair Vengeance 32 GB",
+      "price": 97.99,
+      "speed": [5, 6000],
+      "modules": [2, 16],
+      "price_per_gb": 3.062,
+      "color": "Black",
+      "first_word_latency": 12,
+      "cas_latency": 36
+    },
+    {
+      "name": "G.Skill Ripjaws V 32 GB",
+      "price": 63.99,
+      "speed": [4, 3200],
+      "modules": [2, 16],
+      "price_per_gb": 2,
+      "color": "Black",
+      "first_word_latency": 10,
+      "cas_latency": 16
+    }
+  ],
+  "videoCard": [
+    {
+      "name": "Asus ROG STRIX GAMING OC",
+      "price": 1950.55,
+      "chipset": "GeForce RTX 4090",
+      "memory": 24,
+      "core_clock": 2235,
+      "boost_clock": 2640,
+      "color": "Black",
+      "length": 358
+    },
+    {
+      "name": "Asus TUF GAMING",
+      "price": 1199,
+      "chipset": "GeForce RTX 4080",
+      "memory": 16,
+      "core_clock": 2205,
+      "boost_clock": 2535,
+      "color": "Black",
+      "length": 348
+    },
+    {
+      "name": "Asus TUF GAMING",
+      "price": 949.99,
+      "chipset": "GeForce RTX 4070 Ti",
+      "memory": 12,
+      "core_clock": 2310,
+      "boost_clock": 2640,
+      "color": "Black",
+      "length": 305
+    },
+    {
+      "name": "Asus DUAL OC",
+      "price": 609.99,
+      "chipset": "GeForce RTX 4070",
+      "memory": 12,
+      "core_clock": 2520,
+      "boost_clock": 2550,
+      "color": "White",
+      "length": 267
+    },
+    {
+      "name": "Asus TUF GAMING OC",
+      "price": 444.52,
+      "chipset": "GeForce RTX 4060 Ti",
+      "memory": 8,
+      "core_clock": 2310,
+      "boost_clock": 2655,
+      "color": "Black",
+      "length": 300
+    },
+    {
+      "name": "Gigabyte WINDFORCE OC",
+      "price": 299.99,
+      "chipset": "GeForce RTX 4060",
+      "memory": 8,
+      "core_clock": 1830,
+      "boost_clock": null,
+      "color": "Black",
+      "length": 192
+    },
+    {
+      "name": "ASRock Phantom Gaming OC",
+      "price": 932.76,
+      "chipset": "Radeon RX 7900 XTX",
+      "memory": 24,
+      "core_clock": 2300,
+      "boost_clock": 2615,
+      "color": "Black",
+      "length": 330
+    },
+    {
+      "name": "Sapphire PULSE",
+      "price": 769.99,
+      "chipset": "Radeon RX 7900 XT",
+      "memory": 20,
+      "core_clock": 2000,
+      "boost_clock": 2450,
+      "color": "Black / Red",
+      "length": 313
+    },
+    {
+      "name": "MSI MECH 2X CLASSIC OC",
+      "price": 269.99,
+      "chipset": "Radeon RX 7600",
+      "memory": 8,
+      "core_clock": 1720,
+      "boost_clock": 2695,
+      "color": "Black / Silver",
+      "length": 235
+    },
+    {
+      "name": "Asus TUF GAMING OC",
+      "price": 1496,
+      "chipset": "Radeon RX 6900 XT",
+      "memory": 16,
+      "core_clock": 1825,
+      "boost_clock": 2340,
+      "color": "Black",
+      "length": 320
+    },
+    {
+      "name": "Asus TUF-RX6800XT-O16G-GAMING",
+      "price": 1099,
+      "chipset": "Radeon RX 6800 XT",
+      "memory": 16,
+      "core_clock": 1825,
+      "boost_clock": 2340,
+      "color": "Black",
+      "length": 320
+    }
+  ],
+  "ssd": [
+    {
+      "name": "Samsung 970 Evo Plus",
+      "price": 54.99,
+      "capacity": 1000,
+      "price_per_gb": 0.055,
+      "type": "SSD",
+      "cache": 1024,
+      "form_factor": "M.2-2280",
+      "interface": "M.2 PCIe 3.0 X4"
+    },
+    {
+      "name": "Samsung 980 Pro",
+      "price": 99.99,
+      "capacity": 2000,
+      "price_per_gb": 0.05,
+      "type": "SSD",
+      "cache": 2048,
+      "form_factor": "M.2-2280",
+      "interface": "M.2 PCIe 4.0 X4"
+    },
+    {
+      "name": "Samsung 980 Pro",
+      "price": 59.99,
+      "capacity": 1000,
+      "price_per_gb": 0.06,
+      "type": "SSD",
+      "cache": 1024,
+      "form_factor": "M.2-2280",
+      "interface": "M.2 PCIe 4.0 X4"
+    },
+    {
+      "name": "Kingston NV2",
+      "price": 42.99,
+      "capacity": 1000,
+      "price_per_gb": 0.043,
+      "type": "SSD",
+      "cache": null,
+      "form_factor": "M.2-2280",
+      "interface": "M.2 PCIe 4.0 X4"
+    },
+    {
+      "name": "Samsung 990 Pro",
+      "price": 169.99,
+      "capacity": 2000,
+      "price_per_gb": 0.085,
+      "type": "SSD",
+      "cache": 2048,
+      "form_factor": "M.2-2280",
+      "interface": "M.2 PCIe 4.0 X4"
+    },
+    {
+      "name": "Samsung 970 Evo Plus",
+      "price": 99.99,
+      "capacity": 2000,
+      "price_per_gb": 0.05,
+      "type": "SSD",
+      "cache": 1024,
+      "form_factor": "M.2-2280",
+      "interface": "M.2 PCIe 3.0 X4"
+    },
+    {
+      "name": "Western Digital Black SN770",
+      "price": 49.99,
+      "capacity": 1000,
+      "price_per_gb": 0.05,
+      "type": "SSD",
+      "cache": null,
+      "form_factor": "M.2-2280",
+      "interface": "M.2 PCIe 4.0 X4"
+    },
+    {
+      "name": "Crucial P3",
+      "price": 39.99,
+      "capacity": 1000,
+      "price_per_gb": 0.04,
+      "type": "SSD",
+      "cache": null,
+      "form_factor": "M.2-2280",
+      "interface": "M.2 PCIe 3.0 X4"
+    },
+    {
+      "name": "Samsung 970 Evo Plus",
+      "price": 34.99,
+      "capacity": 500,
+      "price_per_gb": 0.07,
+      "type": "SSD",
+      "cache": 512,
+      "form_factor": "M.2-2280",
+      "interface": "M.2 PCIe 3.0 X4"
+    },
+    {
+      "name": "TEAMGROUP MP34",
+      "price": 75.98,
+      "capacity": 2000,
+      "price_per_gb": 0.038,
+      "type": "SSD",
+      "cache": null,
+      "form_factor": "M.2-2280",
+      "interface": "M.2 PCIe 3.0 X4"
+    }
+  ],
+  "hdd": [
+    {
+      "name": "Seagate SuperSpeed HDD",
+      "price": null,
+      "capacity": 1000,
+      "price_per_gb": null,
+      "type": null,
+      "cache": 64,
+      "form_factor": 2.5,
+      "interface": "SATA 6.0 Gb/s"
+    },
+    {
+      "name": "Seagate Surveillance HDD",
+      "price": 100,
+      "capacity": 2000,
+      "price_per_gb": 0.05,
+      "type": 5400,
+      "cache": 64,
+      "form_factor": 3.5,
+      "interface": "SATA 6.0 Gb/s"
+    },
+    {
+      "name": "Seagate Desktop HDD",
+      "price": null,
+      "capacity": 4000,
+      "price_per_gb": null,
+      "type": 5900,
+      "cache": 64,
+      "form_factor": 3.5,
+      "interface": "SATA 6.0 Gb/s"
+    },
+    {
+      "name": "Seagate Surveillance HDD",
+      "price": null,
+      "capacity": 1000,
+      "price_per_gb": null,
+      "type": 5400,
+      "cache": 64,
+      "form_factor": 3.5,
+      "interface": "SATA 6.0 Gb/s"
+    }
+  ],
+  "cpuCooler": [
+    {
+      "name": "Cooler Master Hyper 212 Black Edition",
+      "price": 49.7,
+      "rpm": [800, 2000],
+      "noise_level": [6.5, 26],
+      "color": null,
+      "size": null
+    },
+    {
+      "name": "Cooler Master MASTERLIQUID ML240L RGB V2",
+      "price": 89.99,
+      "rpm": [650, 1800],
+      "noise_level": [6, 27],
+      "color": "Black",
+      "size": 240
+    },
+    {
+      "name": "be quiet! Dark Rock Pro 4",
+      "price": 89.9,
+      "rpm": 1500,
+      "noise_level": [12.8, 24.3],
+      "color": "Black",
+      "size": null
+    },
+    {
+      "name": "Noctua NH-D15 chromax.black",
+      "price": 119.95,
+      "rpm": [300, 1500],
+      "noise_level": [19.2, 24.6],
+      "color": "Black",
+      "size": null
+    },
+    {
+      "name": "be quiet! Pure Rock 2 Black",
+      "price": 44,
+      "rpm": 1500,
+      "noise_level": [19.1, 26.8],
+      "color": "Black",
+      "size": null
+    },
+    {
+      "name": "NZXT Kraken Z73",
+      "price": 284.99,
+      "rpm": [500, 1800],
+      "noise_level": [21, 36],
+      "color": "Black",
+      "size": 360
+    },
+    {
+      "name": "Deepcool AK400",
+      "price": 34.99,
+      "rpm": [500, 1850],
+      "noise_level": 29,
+      "color": "Black / Silver",
+      "size": null
+    }
+  ],
+  "case": [
+    {
+      "name": "Corsair 4000D Airflow",
+      "price": 89.99,
+      "type": "ATX Mid Tower",
+      "color": "Black",
+      "psu": null,
+      "side_panel": "Tinted Tempered Glass",
+      "external_525_bays": 0,
+      "internal_35_bays": 2
+    },
+    {
+      "name": "NZXT H5 Flow",
+      "price": 94.99,
+      "type": "ATX Mid Tower",
+      "color": "Black",
+      "psu": null,
+      "side_panel": "Tempered Glass",
+      "external_525_bays": 0,
+      "internal_35_bays": 1
+    },
+    {
+      "name": "Lian Li O11 Dynamic EVO",
+      "price": 154.9,
+      "type": "ATX Mid Tower",
+      "color": "White / Gray",
+      "psu": null,
+      "side_panel": "Tempered Glass",
+      "external_525_bays": 0,
+      "internal_35_bays": 6
+    },
+    {
+      "name": "Deepcool CC560",
+      "price": 58.98,
+      "type": "ATX Mid Tower",
+      "color": "Black",
+      "psu": null,
+      "side_panel": "Tempered Glass",
+      "external_525_bays": 0,
+      "internal_35_bays": 2
+    },
+    {
+      "name": "Lian Li O11 Dynamic EVO",
+      "price": 154.99,
+      "type": "ATX Mid Tower",
+      "color": "Black",
+      "psu": null,
+      "side_panel": "Tinted Tempered Glass",
+      "external_525_bays": 0,
+      "internal_35_bays": 6
+    },
+    {
+      "name": "NZXT H9 Flow",
+      "price": 166.98,
+      "type": "ATX Mid Tower",
+      "color": "White",
+      "psu": null,
+      "side_panel": "Tempered Glass",
+      "external_525_bays": 0,
+      "internal_35_bays": 2
+    },
+    {
+      "name": "Corsair iCUE 4000X RGB",
+      "price": 119.99,
+      "type": "ATX Mid Tower",
+      "color": "Black",
+      "psu": null,
+      "side_panel": "Tempered Glass",
+      "external_525_bays": 0,
+      "internal_35_bays": 2
+    },
+    {
+      "name": "NZXT H5 Flow",
+      "price": 79.98,
+      "type": "ATX Mid Tower",
+      "color": "White",
+      "psu": null,
+      "side_panel": "Tempered Glass",
+      "external_525_bays": 0,
+      "internal_35_bays": 1
+    },
+    {
+      "name": "Fractal Design North",
+      "price": 128.98,
+      "type": "ATX Mid Tower",
+      "color": "Black",
+      "psu": null,
+      "side_panel": "Tempered Glass",
+      "external_525_bays": 0,
+      "internal_35_bays": 2
+    },
+    {
+      "name": "Thermaltake Versa H18",
+      "price": 43.99,
+      "type": "MicroATX Mini Tower",
+      "color": "Black",
+      "psu": null,
+      "side_panel": "Tempered Glass",
+      "external_525_bays": 0,
+      "internal_35_bays": 2
+    }
+  ]
+}

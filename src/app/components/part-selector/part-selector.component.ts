@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 
 @Component({
   selector: 'app-part-selector',
@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './part-selector.component.css',
 })
 export class PartSelectorComponent {
+  @Input() partName!: string;
+
+  Cpu1 = 'archive/dataset/cpu:id=1';
+
   description = {
     type: 'cpu',
     producer: 'AMD',
