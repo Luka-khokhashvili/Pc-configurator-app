@@ -1,25 +1,30 @@
 import { Component, Input, input } from '@angular/core';
+import { DataService } from '../../services/data.service';
+import { finalize } from 'rxjs';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-part-selector',
-  imports: [],
+  imports: [NgFor],
   templateUrl: './part-selector.component.html',
   styleUrl: './part-selector.component.css',
 })
 export class PartSelectorComponent {
   @Input() partName!: string;
 
-  Cpu1 = 'archive/dataset/cpu:id=1';
+  parts: any[] = [];
+  errorMessage!: string;
+  loading: boolean = false;
 
-  description = {
-    type: 'cpu',
-    producer: 'AMD',
-    model: 'Ryzen',
-    gen: '5',
-    version: '5600x',
-    cores: 8,
-    threads: 16,
-    ghz: 4,
-    price: 300,
-  };
+  //constructor(private http: HttpClient) {}
+  constructor(private dataService: DataService) {}
+
+  ngOnInit() {
+    if (this.partName) {
+      this.dataService.getAllParts(this.partName).subscribe((data) => {
+        this.parts = data;
+        console.log(data);
+      });
+    }
+  }
 }

@@ -22,11 +22,11 @@ export class AppComponent {
   mainParts: string[] = [
     'cpu',
     'motherboard',
-    'ram',
-    'gpu',
+    'memory',
+    'videoCard',
     'ssd',
     'hdd',
-    'cpu cooler',
+    'cpuCooler',
     'case',
   ];
 }

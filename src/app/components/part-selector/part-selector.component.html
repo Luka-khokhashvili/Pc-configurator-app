@@ -1,5 +1,5 @@
-<section
-  id={{description.type}}
+<section *ngFor="let part of parts"
+  id={{part}}
   class="relative bg-white/60 flex items-center justify-between p-[3%] w-[60vw] h-[35vh] rounded-xl"
 >
   <div class="relative flex items-center gap-[2%] w-[70%] h-full border-r-2">
@@ -7,17 +7,17 @@
       class="bg-white rounded-xl h-full aspect-square flex items-center justify-center text-black"
     >
       <!-- Icon Placeholder -->
-       {{ Cpu1 }}
+       {{ part }}
     </div>
     <div class="flex flex-col items-start justify-center w-[100%]">
       <p class="text-2xl text-black">
-        {{ description.producer }}, {{ description.model }}
-        {{ description.gen }} {{ description.version }}
+        <!-- {{ description.producer }}, {{ description.model }}
+        {{ description.gen }} {{ description.version }} -->
       </p>
-      <p class="text-xl text-black">Cores: {{ description.cores }}</p>
-      <p class="text-xl text-black">Threads: {{ description.threads }}</p>
-      <p class="text-xl text-black">GHZ: {{ description.ghz }}</p>
-      <p class="text-xl text-black">Price: {{ description.price }}</p>
+      <!-- <p class="text-xl text-black">Cores: {{ description.cores }}</p> -->
+      <!-- <p class="text-xl text-black">Threads: {{ description.threads }}</p> -->
+      <!-- <p class="text-xl text-black">GHZ: {{ description.ghz }}</p> -->
+      <!-- <p class="text-xl text-black">Price: {{ description.price }}</p> -->
     </div>
   </div>
   <div class="flex flex-col items-end justify-center w-[30%]">
