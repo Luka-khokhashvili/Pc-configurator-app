@@ -10,14 +10,6 @@ export class DataService {
 
   constructor(private http: HttpClient) {}
 
-  // motherboard: this.http.get<[]>(this.apiUrl + "/motherboard"),
-  // memory: this.http.get<[]>(this.apiUrl + "/memory"),
-  // videoCard: this.http.get<[]>(this.apiUrl + "/videoCard"),
-  // ssd: this.http.get<[]>(this.apiUrl + "/ssd"),
-  // hdd: this.http.get<[]>(this.apiUrl + "/hdd"),
-  // cpuCooler: this.http.get<[]>(this.apiUrl + "/users"),
-  // case: this.http.get<[]>(this.apiUrl + "/users"),
-
   getAllParts(partName: string): Observable<any> {
     if (!partName) {
       throw new Error('partName cannot be null or undefined');

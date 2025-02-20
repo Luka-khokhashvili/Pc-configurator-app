@@ -34,8 +34,8 @@ export class PartSelectorComponent {
     this.toggleWindowValue = !this.toggleWindowValue;
   }
 
-  selectPart(partName: string) {
-    this.selectedPart = this.parts.filter((part) => part.name === partName);
+  selectPart(partId: string) {
+    this.selectedPart = this.parts.filter((part) => part.id === partId);
     this.toggleWindow();
   }
 }

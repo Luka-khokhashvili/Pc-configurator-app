@@ -8,8 +8,10 @@
       <!-- Icon Placeholder -->
        {{ partName }}
     </div>
-    <div class="flex flex-col items-start justify-center w-[100%]">
-
+    <div *ngFor="let item of selectedPart" class="flex flex-col items-start justify-center w-[100%]">
+      <div *ngFor="let entry of item | keyvalue ">
+        <p class="text-[1vw] text-black"><strong>{{ entry.key }}</strong>: {{ entry.value }}</p>
+      </div>
     </div>
   </div>
   <div class="flex flex-col items-end justify-center w-[30%]">
@@ -23,17 +25,24 @@
       Open collection
     </button>
   </div>
-  <div  *ngIf="toggleWindowValue" class="bg-white rounded-xl fixed flex flex-col gap-1 justify-center items-start top-[5vh] left-[5vw] w-[90vw] h-[90vh] p-[5%] overflow-y-scroll z-10">
-    <h1 (click)="toggleWindow()" class="text-black cursor-pointer absolute top-0 right-0">X</h1>
-    <div *ngFor="let part of parts" class="text-black flex flex-row gap-2.5 justify-evenly items-center">
-      <h3>{{ part.name }}</h3>
-      <button (click)="selectPart(part.name)" class="bg-white rounded-xl p-3 text-black capitalize cursor-pointer">
-        Select
-      </button>    
-      <div *ngFor="let entry of part | keyvalue">
-        <p *ngIf="entry.key !== 'name'">
-          <strong>{{ entry.key }}:</strong> {{ entry.value }}
-        </p>
+  <div  *ngIf="toggleWindowValue" class="bg-white rounded-xl fixed flex flex-col gap-1 justify-start items-center top-[5vh] left-[5vw] w-[90vw] h-[90vh] p-[5%] overflow-y-scroll z-10">
+    <h1 (click)="toggleWindow()" class="text-black cursor-pointer absolute top-2 right-2 text-5xl">X</h1>
+    <div *ngFor="let part of parts" class="text-white flex flex-col w-full p-2.5 bg-gray-600 rounded-xl justify-evenly items-start">
+      <div class="flex flex-row justify-between items-center w-full">
+        <div class="bg-white rounded-xl h-full aspect-square flex items-center justify-center text-black">
+          Icon Placeholder
+        </div>
+        <h3 class="text-2xl font-bold">{{ part.name }}</h3>
+        <button (click)="selectPart(part.id)" class="bg-white rounded-xl px-5 py-2 text-black capitalize cursor-pointer">
+          Select
+        </button>
+      </div>
+      <div class="flex flex-row w-full gap-2 p-2">
+        <div class="bg-gray-300 rounded-xl p-2.5 text-black" *ngFor="let entry of part | keyvalue">
+          <p *ngIf="entry.key != 'name'">
+            <strong>{{ entry.key }}:</strong> {{ entry.value }}
+          </p>
+        </div>
       </div>
     </div>
     
