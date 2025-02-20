@@ -1,5 +1,4 @@
-<section *ngFor="let part of parts"
-  id={{part}}
+<section id={{partName}}
   class="relative bg-white/60 flex items-center justify-between p-[3%] w-[60vw] h-[35vh] rounded-xl"
 >
   <div class="relative flex items-center gap-[2%] w-[70%] h-full border-r-2">
@@ -7,17 +6,10 @@
       class="bg-white rounded-xl h-full aspect-square flex items-center justify-center text-black"
     >
       <!-- Icon Placeholder -->
-       {{ part }}
+       {{ partName }}
     </div>
     <div class="flex flex-col items-start justify-center w-[100%]">
-      <p class="text-2xl text-black">
-        <!-- {{ description.producer }}, {{ description.model }}
-        {{ description.gen }} {{ description.version }} -->
-      </p>
-      <!-- <p class="text-xl text-black">Cores: {{ description.cores }}</p> -->
-      <!-- <p class="text-xl text-black">Threads: {{ description.threads }}</p> -->
-      <!-- <p class="text-xl text-black">GHZ: {{ description.ghz }}</p> -->
-      <!-- <p class="text-xl text-black">Price: {{ description.price }}</p> -->
+
     </div>
   </div>
   <div class="flex flex-col items-end justify-center w-[30%]">
@@ -27,8 +19,23 @@
       Icon Placeholder
     </div>
     <h3 class="text-[2vw] text-end text-white font-black uppercase">{{ partName }}</h3>
-    <button class="bg-white rounded-xl p-3 text-black capitalize">
+    <button (click)="toggleWindow()" class="bg-white rounded-xl p-3 text-black capitalize cursor-pointer">
       Open collection
     </button>
+  </div>
+  <div  *ngIf="toggleWindowValue" class="bg-white rounded-xl fixed flex flex-col gap-1 justify-center items-start top-[5vh] left-[5vw] w-[90vw] h-[90vh] p-[5%] overflow-y-scroll z-10">
+    <h1 (click)="toggleWindow()" class="text-black cursor-pointer absolute top-0 right-0">X</h1>
+    <div *ngFor="let part of parts" class="text-black flex flex-row gap-2.5 justify-evenly items-center">
+      <h3>{{ part.name }}</h3>
+      <button (click)="selectPart(part.name)" class="bg-white rounded-xl p-3 text-black capitalize cursor-pointer">
+        Select
+      </button>    
+      <div *ngFor="let entry of part | keyvalue">
+        <p *ngIf="entry.key !== 'name'">
+          <strong>{{ entry.key }}:</strong> {{ entry.value }}
+        </p>
+      </div>
+    </div>
+    
   </div>
 </section>
