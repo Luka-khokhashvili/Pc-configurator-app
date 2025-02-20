@@ -14,6 +14,7 @@ export class PartSelectorComponent {
   toggleWindowValue: boolean = false;
 
   parts: any[] = [];
+  icons: any[] = [];
   selectedPart: any[] = [];
   errorMessage!: string;
   loading: boolean = false;
@@ -25,7 +26,9 @@ export class PartSelectorComponent {
     if (this.partName) {
       this.dataService.getAllParts(this.partName).subscribe((data) => {
         this.parts = data;
-        console.log(this.parts);
+      });
+      this.dataService.getIcons(this.partName).subscribe((data) => {
+        this.icons = data.filter((icon: any) => icon.id === this.partName);
       });
     }
   }

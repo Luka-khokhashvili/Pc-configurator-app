@@ -23,6 +23,19 @@ export class DataService {
     );
   }
 
+  getIcons(partName: string): Observable<any> {
+    if (!partName) {
+      throw new Error('partName cannot be null or undefined');
+    }
+
+    return this.http.get(this.apiUrl + '/icons').pipe(
+      catchError((err) => {
+        console.error('Error occurred while fetching icons: ', err);
+        throw err;
+      })
+    );
+  }
+
   // createPost(postData: any): void {
   //   this.http.post(this.apiUrl + '/posts', postData).subscribe((response) => {
   //     console.log('Post Created: ', response);

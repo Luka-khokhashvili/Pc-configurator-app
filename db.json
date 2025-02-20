@@ -531,7 +531,7 @@
       "interface": "SATA 6.0 Gb/s"
     }
   ],
-  "cpuCooler": [
+  "cooler": [
     {
       "name": "Cooler Master Hyper 212 Black Edition",
       "price": 49.7,
@@ -689,6 +689,40 @@
       "side_panel": "Tempered Glass",
       "external_525_bays": 0,
       "internal_35_bays": 2
+    }
+  ],
+  "icons": [
+    {
+      "id": "cpu",
+      "src": "cpu.png"
+    },
+    {
+      "id": "motherboard",
+      "src": "motherboard.png"
+    },
+    {
+      "id": "memory",
+      "src": "memory.png"
+    },
+    {
+      "id": "videoCard",
+      "src": "gpu.png"
+    },
+    {
+      "id": "ssd",
+      "src": "ssd.png"
+    },
+    {
+      "id": "hdd",
+      "src": "hdd.png"
+    },
+    {
+      "id": "cooler",
+      "src": "cooler.png"
+    },
+    {
+      "id": "case",
+      "src": "case.png"
     }
   ]
 }

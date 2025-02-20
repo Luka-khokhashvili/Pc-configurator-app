@@ -26,7 +26,7 @@ export class AppComponent {
     'videoCard',
     'ssd',
     'hdd',
-    'cpuCooler',
+    'cooler',
     'case',
   ];
 }
