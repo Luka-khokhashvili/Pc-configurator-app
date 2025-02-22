@@ -4,15 +4,11 @@ items-center justify-between">
   <nav>
     <ul class="flex items-center justify-center font-semibold">
       <li class="relative group px-3 py-2">
-        <button class="hover:text-gray-400 cursor-default">Pc Components</button>
+        <a class="hover:text-gray-400 cursor-default">Pc Components</a>
         <app-dropdown-menu [mainParts]="mainParts" />
       </li>
-
       <li class="relative group px-3 py-2">
-        <button class="hover:text-gray-400 cursor-default">Total</button>
-      </li>
-      <li class="relative group px-3 py-2">
-        <button class="hover:text-gray-400 cursor-default">About</button>
+        <a routerLink="about" class="hover:text-gray-400 cursor-pointer">About</a>
       </li>
     </ul>
   </nav>

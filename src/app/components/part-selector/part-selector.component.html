@@ -7,7 +7,7 @@
   class="relative flex flex-col items-center w-[60vw] h-[40vh] rounded-xl transition-all duration-300"
 >
   <div
-    class="flex flex-row bg-white/60 rounded-xl items-end justify-between w-[100%] p-[1%] h-[10vh]"
+    class="flex flex-row bg-white/90 rounded-xl items-center justify-between w-[100%] p-[1%] h-[10vh]"
   >
     <div
       *ngFor="let icon of icons"
@@ -16,12 +16,12 @@
       <img *ngIf="icon.id === partName" [src]="icon.src" [alt]="icon.id" />
     </div>
     <div class="flex flex-row gap-2">
-      <h3 class="text-[2vw] text-end text-white font-black uppercase">
+      <h3 class="text-[2vw] text-end text-gray-900 font-black uppercase">
         {{ partName }}
       </h3>
       <button
         (click)="toggleWindow()"
-        class="bg-white rounded-xl p-3 text-black capitalize cursor-pointer"
+        class="bg-gray-900 rounded-xl p-3 text-white capitalize cursor-pointer"
       >
         Open collection
       </button>
@@ -30,7 +30,7 @@
 
   <div
     *ngIf="selectedPart.length > 0"
-    class="w-[80%] h-fit p-[2%] flex flex-col items-start bg-white/60 rounded-b-xl"
+    class="w-[80%] h-fit p-[2%] flex flex-col items-start bg-white rounded-b-xl"
   >
   <div class="w-full flex flex-row items-center justify-between">
     <h2 class="text-lg font-bold text-black">Selected Part Details:</h2>
