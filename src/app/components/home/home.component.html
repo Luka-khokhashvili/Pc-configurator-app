@@ -1,0 +1,14 @@
+  <app-navbar [mainParts]="mainParts" />
+  <app-welcome />
+  <hr />
+  <section
+    class="flex flex-col justify-center items-center h-auto pt-[5%] gap-[2vh]"
+  >
+    <app-part-selector *ngFor="let part of mainParts" partName="{{ part }}" />
+  </section>
+
+  <section class="w-full flex flex-col justify-center items-center">
+    <a routerLink="/finalBuild" class="bg-white text-black px-6 py-3 rounded-xl"
+      >Submit selection</a
+    >
+  </section>
