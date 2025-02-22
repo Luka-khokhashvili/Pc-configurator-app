@@ -35,10 +35,4 @@ export class DataService {
       })
     );
   }
-
-  // createPost(postData: any): void {
-  //   this.http.post(this.apiUrl + '/posts', postData).subscribe((response) => {
-  //     console.log('Post Created: ', response);
-  //   });
-  // }
 }

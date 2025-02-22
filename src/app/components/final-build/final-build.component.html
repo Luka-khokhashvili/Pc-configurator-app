@@ -1,7 +1,50 @@
-<section class="flex flex-col items-center justify-start min-h-screen bg-gray-900 text-white">
-  <nav class="flex flex-row w-full p-2.5 justify-start items-center">
-    <a routerLink="/" class="bg-white text-black px-6 py-2 rounded-xl mt-4">Back</a>
+<section
+  class="flex flex-col items-center justify-start min-h-screen bg-gray-900 text-white"
+>
+  <nav class="flex flex-row w-full p-2.5 justify-between items-center">
+    <a
+      routerLink="/"
+      (click)="selectionService.clearSelectedList()"
+      class="bg-white text-black px-6 py-2 rounded-xl"
+      >Back</a
+    >
+    <h1 class="text-4xl font-bold">Final Build Page</h1>
+    <app-sign-button />
   </nav>
-  <h1 class="text-4xl font-bold">Final Build Page</h1>
-  <p>Your selected components will appear here.</p>
+  <div class="w-screen h-[80vh] flex items-center justify-evenly p-{2%}">
+    <ul
+      *ngIf="selectionService.finalSelection().length > 0"
+      class="grid grid-cols-4 gap-2 items-center justify-center"
+    >
+      <li *ngFor="let parts of this.selectionService.finalSelection()">
+        <div
+          class="bg-white rounded-xl h-full aspect-square flex items-center justify-center text-black"
+        >
+          Icon Placeholder
+        </div>
+        <div
+          class="flex flex-col bg-white/10 rounded-xl border-2 border-gray-500 gap-1.5 justify-start"
+          *ngFor="let part of parts"
+        >
+          <p class="text-lg">
+            <strong>{{ part.partType }}: </strong>{{ part.name }}
+          </p>
+          <p class="text-m text-end">
+            <strong>Price - </strong
+            ><span *ngIf="part.price !== null">{{ part.price }}$</span>
+            <span *ngIf="part.price === null">Unknown</span>
+          </p>
+        </div>
+      </li>
+    </ul>
+    <h3 *ngIf="selectionService.finalSelection().length === 0">
+      No parts selected
+    </h3>
+  </div>
+  <a
+    routerLink="checkout"
+    (click)="selectionService.clearSelectedList()"
+    class="flex items-center justify-center bg-white text-black rounded-xl px-[5%] py-[2%] m-2"
+    >Check out</a
+  >
 </section>

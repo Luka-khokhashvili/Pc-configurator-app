@@ -1,7 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { CommonModule } from '@angular/common';
 import { PartSelectorModalComponent } from './components-window/components-window.component';
+import { SelectionService } from '../../services/selection.service';
+import { ICONS } from '../../interfaces/union-interface';
 
 @Component({
   selector: 'app-part-selector',
@@ -16,10 +18,11 @@ export class PartSelectorComponent {
   parts: any[] = [];
   icons: any[] = [];
   selectedPart: any[] = [];
-  errorMessage!: string;
-  loading: boolean = false;
 
-  constructor(private dataService: DataService) {}
+  constructor(
+    private dataService: DataService,
+    private selectionService: SelectionService
+  ) {}
 
   ngOnInit() {
     if (this.partName) {
@@ -27,7 +30,7 @@ export class PartSelectorComponent {
         this.parts = data;
       });
       this.dataService.getIcons(this.partName).subscribe((data) => {
-        this.icons = data.filter((icon: any) => icon.id === this.partName);
+        this.icons = data.filter((icon: ICONS) => icon.id === this.partName);
       });
     }
   }
@@ -36,12 +39,16 @@ export class PartSelectorComponent {
     this.toggleWindowValue = !this.toggleWindowValue;
   }
 
-  selectPart(partId: string) {
+  selectPart(partId: number) {
     this.selectedPart = this.parts.filter((part) => part.id === partId);
+
+    console.log(this.selectedPart);
+    this.selectionService.addPart(this.selectedPart);
     this.toggleWindow();
   }
 
-  clearPart() {
+  removePart(partId: number) {
     this.selectedPart = [];
+    this.selectionService.removePart(partId);
   }
 }

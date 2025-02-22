@@ -30,9 +30,17 @@
       <div class="flex flex-row w-full gap-2 p-2">
         <div
           *ngFor="let entry of part | keyvalue"
+          [ngClass]="{
+            hidden:
+              entry.key === null ||
+              entry.key === 'partType' ||
+              entry.key === 'name' ||
+              entry.key === 'id',
+            block: entry.key !== null
+          }"
           class="bg-gray-300 rounded-xl p-2.5 text-black"
         >
-          <p *ngIf="entry.key != 'name' && entry.value != ''">
+          <p>
             <strong>{{ entry.key }}:</strong> {{ entry.value }}
           </p>
         </div>

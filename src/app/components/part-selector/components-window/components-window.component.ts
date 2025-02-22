@@ -12,5 +12,5 @@ export class PartSelectorModalComponent {
   @Input() parts: any[] = [];
 
   @Output() toggleWindow = new EventEmitter<void>();
-  @Output() selectPart = new EventEmitter<string>();
+  @Output() selectPart = new EventEmitter<number>();
 }
