@@ -705,7 +705,6 @@
       "price": 89.99,
       "type": "ATX Mid Tower",
       "color": "Black",
-      "psu": null,
       "side_panel": "Tinted Tempered Glass",
       "external_525_bays": 0,
       "internal_35_bays": 2
@@ -717,7 +716,6 @@
       "price": 94.99,
       "type": "ATX Mid Tower",
       "color": "Black",
-      "psu": null,
       "side_panel": "Tempered Glass",
       "external_525_bays": 0,
       "internal_35_bays": 1
@@ -729,7 +727,6 @@
       "price": 154.9,
       "type": "ATX Mid Tower",
       "color": "White / Gray",
-      "psu": null,
       "side_panel": "Tempered Glass",
       "external_525_bays": 0,
       "internal_35_bays": 6
@@ -741,7 +738,6 @@
       "price": 58.98,
       "type": "ATX Mid Tower",
       "color": "Black",
-      "psu": null,
       "side_panel": "Tempered Glass",
       "external_525_bays": 0,
       "internal_35_bays": 2
@@ -753,7 +749,6 @@
       "price": 154.99,
       "type": "ATX Mid Tower",
       "color": "Black",
-      "psu": null,
       "side_panel": "Tinted Tempered Glass",
       "external_525_bays": 0,
       "internal_35_bays": 6
@@ -765,7 +760,6 @@
       "price": 166.98,
       "type": "ATX Mid Tower",
       "color": "White",
-      "psu": null,
       "side_panel": "Tempered Glass",
       "external_525_bays": 0,
       "internal_35_bays": 2
@@ -777,7 +771,6 @@
       "price": 119.99,
       "type": "ATX Mid Tower",
       "color": "Black",
-      "psu": null,
       "side_panel": "Tempered Glass",
       "external_525_bays": 0,
       "internal_35_bays": 2
@@ -789,7 +782,6 @@
       "price": 79.98,
       "type": "ATX Mid Tower",
       "color": "White",
-      "psu": null,
       "side_panel": "Tempered Glass",
       "external_525_bays": 0,
       "internal_35_bays": 1
@@ -801,7 +793,6 @@
       "price": 128.98,
       "type": "ATX Mid Tower",
       "color": "Black",
-      "psu": null,
       "side_panel": "Tempered Glass",
       "external_525_bays": 0,
       "internal_35_bays": 2
@@ -813,7 +804,6 @@
       "price": 43.99,
       "type": "MicroATX Mini Tower",
       "color": "Black",
-      "psu": null,
       "side_panel": "Tempered Glass",
       "external_525_bays": 0,
       "internal_35_bays": 2
