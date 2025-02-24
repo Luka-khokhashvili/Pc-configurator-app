@@ -12,15 +12,13 @@ import { SignButtonComponent } from '../navbar/sign-button/sign-button.component
 })
 export class FinalBuildComponent {
   finalBuild!: Signal<any[]>;
+  // finalBuild!: any[];
+  total: number = 0;
 
   constructor(public selectionService: SelectionService) {}
 
   ngOnInit() {
     this.finalBuild = this.selectionService.getFinalSelection();
-    console.log(
-      'signal returned value',
-      this.selectionService.getFinalSelection()
-    );
-    console.log('final build value', this.finalBuild);
+    console.log(this.finalBuild);
   }
 }

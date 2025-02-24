@@ -3,7 +3,7 @@ import { DataService } from '../../services/data.service';
 import { CommonModule } from '@angular/common';
 import { PartSelectorModalComponent } from './components-window/components-window.component';
 import { SelectionService } from '../../services/selection.service';
-import { ICONS } from '../../interfaces/union-interface';
+import { Icons } from '../../interfaces/icons';
 
 @Component({
   selector: 'app-part-selector',
@@ -30,7 +30,7 @@ export class PartSelectorComponent {
         this.parts = data;
       });
       this.dataService.getIcons(this.partName).subscribe((data) => {
-        this.icons = data.filter((icon: ICONS) => icon.id === this.partName);
+        this.icons = data.filter((icon: Icons) => icon.id === this.partName);
       });
     }
   }

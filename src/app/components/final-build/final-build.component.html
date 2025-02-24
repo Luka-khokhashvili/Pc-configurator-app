@@ -1,14 +1,14 @@
 <section
   class="flex flex-col items-center justify-start min-h-screen bg-gray-900 text-white"
 >
-  <nav class="flex flex-row w-full p-2.5 justify-between items-center">
+  <nav class="container flex flex-row w-full p-2 mx-auto justify-between items-center">
     <a
       routerLink="/"
       (click)="selectionService.clearSelectedList()"
       class="bg-white text-black px-6 py-2 rounded-xl"
       >Back</a
     >
-    <h1 class="text-4xl font-bold">Final Build Page</h1>
+    <h1 class="text-4xl font-bold">Final Build</h1>
     <app-sign-button />
   </nav>
   <div class="w-screen h-[80vh] flex items-center justify-evenly p-{2%}">
@@ -37,11 +37,13 @@
         </div>
       </li>
     </ul>
-    <h3 class="text-2xl" *ngIf="selectionService.finalSelection().length === 0">
-      No parts selected - return to the home page
+    <h3 class="text-2xl text-center" *ngIf="selectionService.finalSelection().length === 0">
+      No parts selected
+      <br />
+      please return to the home page
       <a
         routerLink=""
-        class="flex items-center justify-center bg-white text-black rounded-xl px-[5%] py-[2%] m-2"
+        class="flex items-center justify-center bg-white text-black rounded-xl px-[5%] py-[2%] m-[2vh]"
         >Return</a
       >
     </h3>
