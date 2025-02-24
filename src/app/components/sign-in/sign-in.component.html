@@ -1,0 +1,40 @@
+<main class="flex flex-col justify-start items-center min-h-screen bg-gray-900">
+  <nav
+    class="container flex flex-row w-full p-2 mx-auto justify-between items-center"
+  >
+    <a routerLink="/" class="bg-white text-black px-6 py-2 rounded-xl">Back</a>
+    <h1 class="text-4xl font-bold text-center">Final Build</h1>
+    <p class="opacity-0">Ghost placeholder</p>
+  </nav>
+  <section class="flex justify-center items-center h-[80vh] min-h-full">
+    <form
+      [formGroup]="signInForm"
+      (ngSubmit)="onSubmit()"
+      class="flex flex-col bg-white/30 rounded-xl items-center justify-evenly w-[20vw] h-auto py-[4vh] px-[2vw] gap-[2vh]"
+    >
+      <div *ngFor="let element of formElements" class="flex flex-col w-full">
+        <label [for]="element" class="text-lg font-bold capitalize">{{ element }}</label>
+        <input
+          [type]="determineInputType(element)"
+          [id]="element"
+          placeholder="Enter {{ element }}..."
+          [formControlName]="element"
+          class="bg-gray-900 p-1.5 border-2 border-white rounded-xl text-center"
+        />
+      </div>
+
+      <button
+        [routerLink]="'/account'"
+        type="submit"
+        [disabled]="!signInForm.valid"
+        [ngClass]="{
+          'cursor-pointer': signInForm.valid,
+          'cursor-not-allowed': !signInForm.valid
+        }"
+        class="justify-center items-center rounded-xl w-full bg-gray-900 px-[4vw] py-[1vh]"
+      >
+        Sign In
+      </button>
+    </form>
+  </section>
+</main>

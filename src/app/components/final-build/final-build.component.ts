@@ -12,7 +12,6 @@ import { SignButtonComponent } from '../navbar/sign-button/sign-button.component
 })
 export class FinalBuildComponent {
   finalBuild!: Signal<any[]>;
-  // finalBuild!: any[];
   total: number = 0;
 
   constructor(public selectionService: SelectionService) {}
