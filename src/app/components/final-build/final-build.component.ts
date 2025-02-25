@@ -16,8 +16,13 @@ export class FinalBuildComponent {
 
   constructor(public selectionService: SelectionService) {}
 
+  /**
+   * Called when the component is initialized.
+   * It subscribes to the selection service's finalBuild signal and logs the selection.
+   */
   ngOnInit() {
     this.finalBuild = this.selectionService.getFinalSelection();
+    // Log the final selection for debugging purposes
     console.log(this.finalBuild);
   }
 }

@@ -6,10 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.css',
 })
-export class WelcomeComponent {
-  // ImagePath: string;
-  // constructor() {
-  //   //image location
-  //   this.ImagePath = '/assets/images/athenaPc.jpg';
-  // }
-}
+export class WelcomeComponent {}
