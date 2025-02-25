@@ -2,7 +2,7 @@ import { createAction, props } from '@ngrx/store';
 
 export const loadParts = createAction(
   '[Parts] Load Parts',
-  props<{ pratName: string }>()
+  props<{ partName: string }>()
 );
 
 export const loadPartsSuccess = createAction(
