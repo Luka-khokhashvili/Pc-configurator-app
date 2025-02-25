@@ -1,9 +1,18 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { DataService } from '../../services/data.service';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PartSelectorModalComponent } from './components-window/components-window.component';
-import { SelectionService } from '../../services/selection.service';
 import { Icons } from '../../interfaces/icons';
+import { map, Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { PartState } from '../../state/parts.reducer';
+import {
+  selectError,
+  selectIcons,
+  selectLoading,
+  selectParts,
+} from '../../state/parts.selector';
+import { loadIcons, loadParts } from '../../state/parts.actions';
+import { SelectionService } from '../../services/selection.service';
 
 @Component({
   selector: 'app-part-selector',
@@ -15,23 +24,54 @@ export class PartSelectorComponent {
   @Input() partName!: string;
 
   toggleWindowValue: boolean = false;
-  parts: any[] = [];
-  icons: any[] = [];
+  parts$: Observable<any[]>;
+  icons$: Observable<Icons[]>;
+  loading$: Observable<boolean>;
+  error$: Observable<any>;
   selectedPart: any[] = [];
 
   constructor(
-    private dataService: DataService,
-    private selectionService: SelectionService
-  ) {}
+    private selectionService: SelectionService,
+    private store: Store<PartState>
+  ) {
+    console.log(
+      'Constructor of PartSelectorComponent called with partName:',
+      this.partName
+    );
+
+    this.parts$ = this.store.select(selectParts).pipe(
+      map((parts) => {
+        if (parts === null || parts === undefined) {
+          throw new Error('parts cannot be null or undefined');
+        }
+        return parts[this.partName] || [];
+      })
+    );
+
+    this.icons$ = this.store.select(selectIcons).pipe(
+      map((icons) => {
+        if (icons === null || icons === undefined) {
+          throw new Error('icons cannot be null or undefined');
+        }
+        return icons.filter((icon) => icon.id === this.partName);
+      })
+    );
+
+    this.loading$ = this.store.select(selectLoading);
+    this.error$ = this.store.select(selectError);
+  }
 
   ngOnInit() {
-    if (this.partName) {
-      this.dataService.getAllParts(this.partName).subscribe((data) => {
-        this.parts = data;
-      });
-      this.dataService.getIcons(this.partName).subscribe((data) => {
-        this.icons = data.filter((icon: Icons) => icon.id === this.partName);
-      });
+    if (this.partName !== null && this.partName !== undefined) {
+      try {
+        console.log('Dispatching loadParts action');
+        this.store.dispatch(loadParts({ partName: this.partName }));
+
+        console.log('Dispatching loadIcons action');
+        this.store.dispatch(loadIcons());
+      } catch (error) {
+        console.error('Error in ngOnInit:', error);
+      }
     }
   }
 
@@ -40,10 +80,10 @@ export class PartSelectorComponent {
   }
 
   selectPart(partId: number) {
-    this.selectedPart = this.parts.filter((part) => part.id === partId);
-
-    console.log(this.selectedPart);
-    this.selectionService.addPart(this.selectedPart);
+    this.parts$.subscribe((parts) => {
+      this.selectedPart = parts.filter((part) => part.id === partId);
+      this.selectionService.addPart(this.selectedPart);
+    });
     this.toggleWindow();
   }
 

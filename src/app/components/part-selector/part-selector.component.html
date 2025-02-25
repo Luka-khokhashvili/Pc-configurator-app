@@ -10,7 +10,7 @@
     class="flex flex-row bg-white/90 rounded-xl items-center justify-between w-[100%] p-[1%] h-[10vh]"
   >
     <div
-      *ngFor="let icon of icons"
+      *ngFor="let icon of icons$ | async"
       class="relative rounded-xl h-[100%] aspect-square flex items-center justify-center"
     >
       <img *ngIf="icon.id === partName" [src]="icon.src" [alt]="icon.id" />
@@ -64,7 +64,7 @@
   </div>
 
   <app-components-window
-    [parts]="parts"
+    [parts]="parts$ | async"
     [toggleWindowValue]="toggleWindowValue"
     (toggleWindow)="toggleWindow()"
     (selectPart)="selectPart($event)"

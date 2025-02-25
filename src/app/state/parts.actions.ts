@@ -7,7 +7,7 @@ export const loadParts = createAction(
 
 export const loadPartsSuccess = createAction(
   '[Parts] Load Parts Success',
-  props<{ parts: any }>()
+  props<{ partName: string; parts: any }>()
 );
 
 export const loadPartsFailure = createAction(

@@ -9,7 +9,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class PartSelectorModalComponent {
   @Input() toggleWindowValue: boolean = false;
-  @Input() parts: any[] = [];
+  @Input() parts: any[] | null = [];
 
   @Output() toggleWindow = new EventEmitter<void>();
   @Output() selectPart = new EventEmitter<number>();
